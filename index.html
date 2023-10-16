@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- <span id="html"> -->
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>エラー</title>
+	<!-- <script stc="./script.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		function main(text){
+			$('head').html('<title>test</title><style>p{color:#00f}</style>');
+			$('body').html('<p>成功</p>');
+			// alert("test");
+			// let element0 = document.querySelector("#error");
+			// console.log(element0);
+			// element0.remove();
+			// let element = document.querySelector("#html");
+			// console.log(element);
+			// console.log(String(element));
+			// element.innerHTML = text;
+			// let element2 =document.querySelector("p");
+			// element2.textcontent="aaa";
+		}
+		window.onload = function(){
+			main('<html lang="en">\n<head>\n    <meta charset="UTF-8">\n    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n    <title>test</title>\n</head>\n<body>\n    <h1>タイトル</h1>\n    <p>文字</p>\n</body>\n</html>');
+		}
+	</script>
+</head>
+<body>
+	<p id="error">エラー</p>
+</body>
+</html>
+<!-- </span> -->
