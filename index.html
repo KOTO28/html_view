@@ -6,12 +6,20 @@
 	<title>エラー</title>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	<script>
-		function main(){
-			$('head').html('<title>test</title><style>p{color:#00f}</style>');
-			$('body').html('<p>成功</p>');
+		function main(head,body){
+			$('head').html(head);
+			$('body').html(body);
 		}
 		window.onload = function(){
-			main();
+			console.log(window.location.search);
+			const searchParams = new URLSearchParams(window.location.search);
+			const content = {};
+			for (const [key, val] of searchParams) {
+				console.log(`${key}: ${val}`);
+				content[key] = val;
+			}
+			console.log(searchParams);
+			main(content.head,content.body);
 		}
 	</script>
 </head>
