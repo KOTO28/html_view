@@ -1,5 +1,7 @@
 body{
 	margin: 0;
+	font-family: "Meiryo UI","メイリオ","Meiryo","Osaka",sans-serif;
+	background-color: #0ff;
 }
 .container{
 	/* width: 100vw; */
@@ -16,12 +18,12 @@ form{
 /* --- INPUT=TEXTの標準デザイン設定 ---------------------*/
 .textArea {
 	width         : 80vw;               /* 入力域の最大幅 */
-	height        : 36px;                /* 入力域の高さ   */
+	height        : 80px;                /* 入力域の高さ   */
 	background    : #ffffff;             /* 入力域の背景色 */
 	border        : 3px solid #000;   /* 入力域の枠線   */
 	border-radius : 4px;                 /* 入力域の角丸   */
 	padding       : 8px;                /* 入力文字の余白 */
-	/* margin        : 0 calc(10% - 11px); */
+	margin-bottom : 10px;
 	font-size     : 16px;                /* 入力文字サイズ */
 	color         : #333333;             /* 入力文字の色   */
 	font-weight   : bold;                /* 入力文字の太字 */
@@ -52,7 +54,7 @@ form{
 	border: 3px solid #000;
 	border-radius: 4px;
 	padding: 8px;
-	margin: 5px calc(10% - 11px);
+	margin-bottom: 10px;
 }
 .result{
 	width: 80%;
@@ -61,6 +63,7 @@ form{
 	padding: 8px;
 	/* margin: 0 calc(10% - 11px); */
 	/* margin-top: 100px in !important; */
+	background-color: #fff;
 }
 h1{
 	text-align: center;
