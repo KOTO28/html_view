@@ -8,8 +8,8 @@
 	<script>
 		window.onload = function(){
 			document.querySelector('#button1').addEventListener("click",function(){
-				const url = "./main.html?content="+document.querySelector('#head').value+"*+!split!+*"+document.querySelector('#body').value
-				document.querySelector('.result').textContent = url
+				const url = "./main.html?content="+document.querySelector('#head').value+"*+!split!+*"+document.querySelector('#body').value;
+				document.querySelector('.result').textContent = url;
 				document.querySelector('.result').setAttribute('href',url);
 				console.log("head:"+document.querySelector('#head').value);
 				console.log("body:"+document.querySelector('#body').value);
