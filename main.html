@@ -11,15 +11,9 @@
 			$('body').html(body);
 		}
 		window.onload = function(){
-			console.log(window.location.search);
-			const searchParams = new URLSearchParams(window.location.search);
-			const content = {};
-			for (const [key, val] of searchParams) {
-				console.log(`${key}: ${val}`);
-				content[key] = val;
-			}
-			console.log(searchParams);
-			main(content.head,content.body);
+			const content = decodeURI(window.location.href).split("?")[1].split("=")[1].split("*+!split!+*");
+			console.log(content);
+			main(content[0],content[1]);
 		}
 	</script>
 </head>

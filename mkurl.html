@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>mkurl</title>
+	<link rel="stylesheet" href="style.css">
+	<script>
+		window.onload = function(){
+			document.querySelector('#button1').addEventListener("click",function(){
+				const url = "./main.html?content="+document.querySelector('#head').value+"*+!split!+*"+document.querySelector('#body').value
+				document.querySelector('.result').textContent = url
+				document.querySelector('.result').setAttribute('href',url);
+				console.log("head:"+document.querySelector('#head').value);
+				console.log("body:"+document.querySelector('#body').value);
+				console.log("url:"+url);
+			});
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h1>URL生成</h1>
+		<form action=”#”>
+			<textarea class="textArea" id="head" placeholder="headを入力してください"></textarea><br>
+			<textarea class="textArea" id="body" placeholder="bodyを入力してください"></textarea>
+		</form>
+		<button id="button1">ボタン</button>
+		<a class="result">test</a>
+	</div>
+</body>
+</html>
