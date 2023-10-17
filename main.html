@@ -11,9 +11,18 @@
 			$('body').html(body);
 		}
 		window.onload = function(){
-			const content = decodeURI(window.location.href).split("?")[1].split("=")[1].split("*+!split!+*");
+			// const content = decodeURI(window.location.href).split("?")[1].split("=")[1].split("*+!split!+*");
+			const content = supersplit(supersplit(decodeURI(window.location.href),"?"),"=").split("*+!split!+*");
 			console.log(content);
 			main(content[0],content[1]);
+		}
+		function supersplit(origin,word){
+			let splited = origin.split(word);
+			let result = splited[1];
+			for(let i = 2;i < splited.length;i++){
+				result = result+word+splited[i];
+			}
+			return result;
 		}
 	</script>
 </head>
